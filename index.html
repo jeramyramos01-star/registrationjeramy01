@@ -7,6 +7,7 @@
     
 <body>
 
+
 <nav>
     <div class="logo">
         <img src="main/tommy2.jpg">
@@ -44,7 +45,7 @@
             <img src="main/cream.webp" alt="">
             <h3>Signature Logo Tee</h3>
             <p>$35</p>
-            <button onclick="addToCart(35)">Add to Cart</button>
+         <button onclick="addToCart(35)">Add to Cart</button>
         </div>
 
         <div class="product">
@@ -60,74 +61,97 @@
 
 </body>
 <style>
-        body{
-            margin:0;
-            font-family:Arial, Helvetica, sans-serif;
-            background:#f1f1f1;
-        }
+ body {
+    background: #f1f1f1;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
 
-        nav{
-            background:#ffffff;
-            padding:15px 50px;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            box-shadow:0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+nav {
+    background: #002366; 
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-        .logo img{
-            height:50px;
-            width:auto;
-        }
+nav a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 20px;
+}
 
-        nav a{
-            text-decoration:none;
-            margin-left:20px;
-            color:#000000;
-            font-weight:bold;
-        }
+nav a:hover {
+    color: #E4002B; 
+}
 
-        nav a:hover{
-            color:#000000;
-        }
+.hero {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to right, #002366, #E4002B);
+    color: white;
+}
 
-        .hero{
-            height:80vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            background:linear-gradient(to right,#ffffff,#f10000);
-        }
+.hero button {
+    background: white;
+    color: #002366;
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
 
-        .hero h1{
-            font-size:40px;
-            margin-bottom:20px;
-        }
+.hero button:hover {
+    background: #E4002B;
+    color: white;
+}
 
-        .hero p{
-            color:#666;
-            margin-bottom:20px;
-        }
+.product {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 35, 102, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        .hero button{
-            padding:12px 25px;
-            border:none;
-            background:#333;
-            color:white;
-            cursor:pointer;
-        }
+.product p {
+    color: #E4002B; /* Red price */
+    font-weight: 700;
+    font-size: 1.1rem;
+}
 
-        .hero button:hover{
-            background:#555;
-        }
+.product button {
+    background: #002366; 
+    color: white;
+    padding: 10px 25px;
+    border-radius: 35px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 35, 102, 0.3);
+    border: none;
+    transition: background 0.3s ease;
+}
 
-        footer{
-            text-align:center;
-            padding:20px;
-            background:#fff;
-            color:#777;
-        }
+.product button:hover {
+    background: #E4002B; 
+    box-shadow: 0 6px 14px rgba(228, 0, 43, 0.5);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #002366;
+    color: white;
+}
+       
 
 
 .container{
@@ -217,4 +241,5 @@ h2 {
 
 
 </html>
+
 
