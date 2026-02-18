@@ -47,78 +47,139 @@
 </footer>
 
 </body>
+<head>
+
+    
+
 <style>
-        body{
-            margin:0;
-            font-family:Arial, Helvetica, sans-serif;
-            background:#f1f1f1;
-        }
 
-        nav{
-            background:#ffffff;
-            padding:15px 50px;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            box-shadow:0 2px 5px rgba(255, 252, 252, 0.1);
-        }
+ {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-        .logo img{
-            height:50px;
-            width:auto;
-        }
+    body {
+        font-family: 'Arial Black', Arial, sans-serif;
+        background: #fff;
+        color: #0A1E5E;
+        line-height: 1.6;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background-color: #fff;
+    }
 
-        nav a{
-            text-decoration:none;
-            margin-left:20px;
-            color:#000000;
-            font-weight:bold;
-        }
+    nav {
+        background-color: #0A1E5E;
+        padding: 15px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 8px rgba(10,30,94,0.4);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
 
-        nav a:hover{
-            color:#000000;
-        }
+    .logo img {
+        height: 50px;
+        width: auto;
+        filter: drop-shadow(0 0 1px #E20707);
+    }
 
-        .hero{
-            height:80vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            background:linear-gradient(to right,#ffffff,#e70707);
-        }
+    nav div a {
+        margin-left: 30px;
+        text-decoration: none;
+        font-weight: 700;
+        color: #fff;
+        position: relative;
+        transition: color 0.3s ease;
+        font-family: 'Arial Black', Arial, sans-serif;
+    }
 
-        .hero h1{
-            font-size:40px;
-            margin-bottom:20px;
-        }
+    nav div a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background: #E20707;
+        left: 0;
+        bottom: -5px;
+        transition: width 0.3s ease;
+    }
 
-        .hero p{
-            color:#666;
-            margin-bottom:20px;
-        }
+    nav div a:hover {
+        color: #E20707;
+    }
 
-        .hero button{
-            padding:12px 25px;
-            border:none;
-            background:#333;
-            color:white;
-            cursor:pointer;
-        }
+    nav div a:hover::after {
+        width: 100%;
+    }
 
-        .hero button:hover{
-            background:#555;
-        }
+    section.hero {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #0A1E5E;
+        text-align: center;
+        padding: 60px 20px;
+        color: #fff;
+    }
 
-        footer{
-            text-align:center;
-            padding:20px;
-            background:#fff;
-            color:#777;
+    section.hero h1 {
+        font-size: 3rem;
+        font-weight: 900;
+        color: #E20707;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+        font-family: 'Arial Black', Arial, sans-serif;
+    }
+
+    section.hero p {
+        max-width: 700px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+        color: #b0c4de;
+        line-height: 1.5;
+        white-space: pre-line;
+    }
+
+    footer {
+        background-color: #0A1E5E;
+        text-align: center;
+        padding: 15px;
+        box-shadow: 0 -2px 8px rgba(10, 30, 94, 0.4);
+        color: #fff;
+        font-size: 0.9rem;
+        user-select: none;
+        font-family: 'Arial Black', Arial, sans-serif;
+    }
+
+    @media (max-width: 600px) {
+        nav {
+            flex-direction: column;
+            padding: 15px 20px;
         }
-    </style>
+        nav div a {
+            margin: 10px 15px 0;
+        }
+        section.hero h1 {
+            font-size: 2rem;
+        }
+        section.hero p {
+            font-size: 1rem;
+            max-width: 100%;
+        }
+    }
+</style>
+
 </head>
+    
+
 
 
 
 </html>
+
