@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tommy-H Clothingline</title>
+    <title>Tommy Hilfiger</title>
 
     
 <body>
@@ -27,6 +27,32 @@
         </a>
     </div>
 </section>
+
+<div class="container">
+    <h2>Featured Product's</h2>
+
+    <div class="products">
+
+<div class="product">
+            <img src="grs.jpg" alt="">
+            <h3>Urban Grey Shirt</h3>
+            <p>$28</p>
+            <button onclick="addToCart(28)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="cream.webp" alt="">
+            <h3>Signature Logo Tee</h3>
+            <p>$35</p>
+            <button onclick="addToCart(35)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="black.webp" alt="">
+            <h3>Modern Fit Shirt</h3>
+            <p>$27</p>
+            <button onclick="addToCart(27)">Add to Cart</button>
+        </div>
 
 <footer>
     © 2026 TOMMY HILGFIGER
@@ -102,6 +128,89 @@
             background:#fff;
             color:#777;
         }
+
+
+.container{
+    padding: 40px 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #111;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.product:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+}
+
+.product img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.product:hover img {
+    transform: scale(1.05);
+}
+
+.product h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.product p {
+    font-weight: 700;
+    color: #e60023; /* Brand red */
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.product button {
+    padding: 10px 25px;
+    border: none;
+    background: #e60023;
+    color: white;
+    border-radius: 35px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(230, 0, 35, 0.3);
+}
+
+.product button:hover {
+    background: #b0001a;
+    box-shadow: 0 6px 14px rgba(176, 0, 26, 0.5);
+}
+
     </style>
 </head>
 
