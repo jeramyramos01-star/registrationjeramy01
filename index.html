@@ -1,245 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Tommy Hilfiger</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tommy Hilfiger</title>
+  <style>
+   {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f7f8fa;
+      color: #111;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    nav {
+      background-color: #002366; /* Tommy Navy */
+      padding: 1rem 3rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      box-shadow: 0 3px 10px rgba(0, 35, 102, 0.3);
+    }
+    nav .logo img {
+      height: 50px;
+      filter: brightness(100%);
+      cursor: pointer;
+      transition: filter 0.3s ease;
+    }
+    nav .logo img:hover {
+      filter: brightness(85%);
+    }
+    .hero {
+      background: linear-gradient(90deg, #002366 60%, #e4002b 40%);
+      color: white;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 1rem;
+    }
+    .hero-content {
+      max-width: 600px;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: 3px;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      text-shadow: 1px 2px 6px rgba(0,0,0,0.3);
+    }
+    .hero-content a button {
+      background-color: white;
+      color: #002366;
+      border: none;
+      padding: 1rem 2.5rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.6);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .hero-content a button:hover {
+      background-color: #e4002b;
+      color: white;
+      box-shadow: 0 10px 25px rgba(228, 0, 43, 0.8);
+    }
+    .container {
+      max-width: 1100px;
+      margin: 3rem auto 6rem;
+      padding: 0 1.5rem;
+    }
 
-    
+    .container h2 {
+      text-align: center;
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: #002366;
+      margin-bottom: 3rem;
+      letter-spacing: 2px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .product {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 35, 102, 0.15);
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: default;
+    }
+    .product:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 35px rgba(0, 35, 102, 0.3);
+    }
+    .product img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1.2rem;
+      transition: transform 0.3s ease;
+    }
+    .product:hover img {
+      transform: scale(1.05);
+    }
+    .product h3 {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #222;
+      margin-bottom: 0.5rem;
+    }
+    .product p {
+      color: #e4002b;
+      font-weight: 800;
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .product button {
+      background: #002366;
+      color: white;
+      padding: 0.85rem 2rem;
+      font-weight: 700;
+      font-size: 1rem;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0, 35, 102, 0.4);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .product button:hover {
+      background: #e4002b;
+      box-shadow: 0 6px 20px rgba(228, 0, 43, 0.7);
+    }
+    footer {
+      background-color: #002366;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.2);
+      user-select: none;
+    }
+
+    @media (max-width: 600px) {
+      .hero-content h1 {
+        font-size: 2.1rem;
+      }
+      .hero-content a button {
+        padding: 0.85rem 2rem;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
 <body>
-
-
-<nav>
+  <nav>
     <div class="logo">
-        <img src="main/tommy2.jpg">
+      <img src="main/tommy2.jpg" alt="Tommy Hilfiger Logo" />
     </div>
+  </nav>
 
-    
-   
-</nav>
-
-<section class="hero">
-    <div>
-
-        <h1 fontstyle="font-family" ><b>WELCOME!</b></h1>
-     
-        <a href="products.html">
-            <button>Shop Now</button>
-            
-        </a>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Tommy Hilfiger</h1>
+      <a href="products.html">
+        <button>Shop Now</button>
+      </a>
     </div>
-</section>
+  </section>
 
-<div class="container">
-    <h2>Featured Product's</h2>
-
+  <div class="container">
+    <h2>Featured Products</h2>
     <div class="products">
 
-<div class="product">
-            <img src="main/grs.jpg" alt="">
-            <h3>Urban Grey Shirt</h3>
-            <p>$28</p>
-            <button onclick="addToCart(28)">Add to Cart</button>
-        </div>
+      <div class="product">
+        <img src="main/grs.jpg" alt="Urban Grey Shirt" />
+        <h3>Urban Grey Shirt</h3>
+        <p>$28</p>
+        <button onclick="addToCart(28)">Add to Cart</button>
+      </div>
 
-        <div class="product">
-            <img src="main/cream.webp" alt="">
-            <h3>Signature Logo Tee</h3>
-            <p>$35</p>
-         <button onclick="addToCart(35)">Add to Cart</button>
-        </div>
+      <div class="product">
+        <img src="main/cream.webp" alt="Signature Logo Tee" />
+        <h3>Signature Logo Tee</h3>
+        <p>$35</p>
+        <button onclick="addToCart(35)">Add to Cart</button>
+      </div>
 
-        <div class="product">
-            <img src="main/black.webp" alt="">
-            <h3>Modern Fit Shirt</h3>
-            <p>$27</p>
-            <button onclick="addToCart(27)">Add to Cart</button>
-        </div>
+      <div class="product">
+        <img src="main/black.webp" alt="Modern Fit Shirt" />
+        <h3>Modern Fit Shirt</h3>
+        <p>$27</p>
+        <button onclick="addToCart(27)">Add to Cart</button>
+      </div>
 
-<footer>
-    © 2026 TOMMY HILGFIGER
-</footer>
+    </div>
+  </div>
 
+  <footer>
+    &copy; 2026 TOMMY HILFIGER
+  </footer>
+
+  <script>
+    // Placeholder function because not implemented yet
+    function addToCart(price) {
+      alert('Added to cart: $' + price);
+    }
+  </script>
 </body>
-<style>
- body {
-    background: #f1f1f1;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-}
-
-nav {
-    background: #002366; 
-    padding: 15px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-nav a {
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    margin-left: 20px;
-}
-
-nav a:hover {
-    color: #E4002B; 
-}
-
-.hero {
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: linear-gradient(to right, #002366, #E4002B);
-    color: white;
-}
-
-.hero button {
-    background: white;
-    color: #002366;
-    padding: 12px 25px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-}
-
-.hero button:hover {
-    background: #E4002B;
-    color: white;
-}
-
-.product {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0, 35, 102, 0.15);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product p {
-    color: #E4002B; /* Red price */
-    font-weight: 700;
-    font-size: 1.1rem;
-}
-
-.product button {
-    background: #002366; 
-    color: white;
-    padding: 10px 25px;
-    border-radius: 35px;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 35, 102, 0.3);
-    border: none;
-    transition: background 0.3s ease;
-}
-
-.product button:hover {
-    background: #E4002B; 
-    box-shadow: 0 6px 14px rgba(228, 0, 43, 0.5);
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #002366;
-    color: white;
-}
-       
-
-
-.container{
-    padding: 40px 60px;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-h2 {
-    font-size: 2.5rem;
-    color: #111;
-    text-align: center;
-    margin-bottom: 40px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.product {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.product:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 30px rgba(0,0,0,0.15);
-}
-
-.product img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 15px;
-    transition: transform 0.3s ease;
-}
-
-.product:hover img {
-    transform: scale(1.05);
-}
-
-.product h3 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #222;
-    margin-bottom: 8px;
-}
-
-.product p {
-    font-weight: 700;
-    color: #e60023; /* Brand red */
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-}
-
-.product button {
-    padding: 10px 25px;
-    border: none;
-    background: #e60023;
-    color: white;
-    border-radius: 35px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    box-shadow: 0 4px 10px rgba(230, 0, 35, 0.3);
-}
-
-.product button:hover {
-    background: #b0001a;
-    box-shadow: 0 6px 14px rgba(176, 0, 26, 0.5);
-}
-
-    </style>
-</head>
-
-
-
 </html>
-
-
