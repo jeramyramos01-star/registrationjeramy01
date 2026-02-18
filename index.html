@@ -1,216 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
   <title>Tommy Hilfiger</title>
-  <style>
-   {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f7f8fa;
-      color: #111;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-    nav {
-      background-color: #002366; 
-      padding: 1rem 3rem;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      box-shadow: 0 3px 10px rgba(0, 35, 102, 0.3);
-    }
-    nav .logo img {
-      height: 50px;
-      filter: brightness(100%);
-      cursor: pointer;
-      transition: filter 0.3s ease;
-    }
-    nav .logo img:hover {
-      filter: brightness(85%);
-    }
-    .hero {
-      background: linear-gradient(90deg, #002366 60%, #e4002b 40%);
-      color: white;
-      height: 90vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 0 1rem;
-    }
-    .hero-content {
-      max-width: 600px;
-    }
-    .hero-content h1 {
-      font-size: 3rem;
-      font-weight: 900;
-      letter-spacing: 3px;
-      margin-bottom: 1rem;
-      text-transform: uppercase;
-      text-shadow: 1px 2px 6px rgba(0,0,0,0.3);
-    }
-    .hero-content a button {
-      background-color: white;
-      color: #002366;
-      border: none;
-      padding: 1rem 2.5rem;
-      font-size: 1.2rem;
-      font-weight: 700;
-      border-radius: 30px;
-      cursor: pointer;
-      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.6);
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-    .hero-content a button:hover {
-      background-color: #e4002b;
-      color: white;
-      box-shadow: 0 10px 25px rgba(228, 0, 43, 0.8);
-    }
-    .container {
-      max-width: 1100px;
-      margin: 3rem auto 6rem;
-      padding: 0 1.5rem;
-    }
-
-    .container h2 {
-      text-align: center;
-      font-size: 2.8rem;
-      font-weight: 900;
-      color: #002366;
-      margin-bottom: 3rem;
-      letter-spacing: 2px;
-    }
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2.5rem;
-    }
-
-    .product {
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0, 35, 102, 0.15);
-      padding: 1.5rem;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: default;
-    }
-    .product:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 35px rgba(0, 35, 102, 0.3);
-    }
-    .product img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 12px;
-      margin-bottom: 1.2rem;
-      transition: transform 0.3s ease;
-    }
-    .product:hover img {
-      transform: scale(1.05);
-    }
-    .product h3 {
-      font-weight: 700;
-      font-size: 1.2rem;
-      color: #222;
-      margin-bottom: 0.5rem;
-    }
-    .product p {
-      color: #e4002b;
-      font-weight: 800;
-      font-size: 1.1rem;
-      margin-bottom: 1.2rem;
-    }
-
-    .product button {
-      background: #002366;
-      color: white;
-      padding: 0.85rem 2rem;
-      font-weight: 700;
-      font-size: 1rem;
-      border-radius: 30px;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 4px 15px rgba(0, 35, 102, 0.4);
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    }
-    .product button:hover {
-      background: #e4002b;
-      box-shadow: 0 6px 20px rgba(228, 0, 43, 0.7);
-    }
-    footer {
-      background-color: #002366;
-      color: white;
-      text-align: center;
-      padding: 1.5rem 1rem;
-      font-weight: 600;
-      letter-spacing: 1.2px;
-      box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.2);
-      user-select: none;
-    }
-
-    @media (max-width: 600px) {
-      .hero-content h1 {
-        font-size: 2.1rem;
-      }
-      .hero-content a button {
-        padding: 0.85rem 2rem;
-        font-size: 1rem;
-      }
-    }
-  </style>
 </head>
-<body>
-  <nav>
+<body style="margin:0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f7f8fa; color: #111; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+
+  <nav style="background-color: #002366; padding: 1rem 3rem; display: flex; justify-content: flex-start; align-items: center; box-shadow: 0 3px 10px rgba(0, 35, 102, 0.3);">
     <div class="logo">
-      <img src="main/tommy2.jpg" alt="Tommy Hilfiger Logo" />
+      <img src="main/tommy2.jpg" alt="Tommy Hilfiger Logo" 
+        style="height: 50px; filter: brightness(100%); cursor: pointer; transition: filter 0.3s ease;" 
+        onmouseover="this.style.filter='brightness(85%)';" 
+        onmouseout="this.style.filter='brightness(100%)';" />
     </div>
   </nav>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Welcome to Tommy Hilfiger</h1>
+  <section class="hero" style="background: linear-gradient(90deg, #002366 60%, #e4002b 40%); color: white; height: 90vh; display: flex; justify-content: center; align-items: center; text-align: center; padding: 0 1rem;">
+    <div class="hero-content" style="max-width: 600px;">
+      <h1 style="font-size:3rem; font-weight:900; letter-spacing:3px; margin-bottom:1rem; text-transform:uppercase; text-shadow: 1px 2px 6px rgba(0,0,0,0.3);">Welcome to Tommy Hilfiger</h1>
       <a href="products.html">
-        <button>Shop Now</button>
+        <button style="background-color: white; color: #002366; border: none; padding: 1rem 2.5rem; font-size: 1.2rem; font-weight: 700; border-radius: 30px; cursor: pointer; box-shadow: 0 10px 25px rgba(255, 255, 255, 0.6); transition: background-color 0.3s ease, color 0.3s ease;"
+          onmouseover="this.style.backgroundColor='#e4002b'; this.style.color='white'; this.style.boxShadow='0 10px 25px rgba(228, 0, 43, 0.8)';" 
+          onmouseout="this.style.backgroundColor='white'; this.style.color='#002366'; this.style.boxShadow='0 10px 25px rgba(255, 255, 255, 0.6)';"
+        >Shop Now</button>
       </a>
     </div>
   </section>
 
-  <div class="container">
-    <h2>Featured Products</h2>
-    <div class="products">
+  <div class="container" style="max-width: 1100px; margin: 3rem auto 6rem; padding: 0 1.5rem;">
+    <h2 style="text-align: center; font-size: 2.8rem; font-weight: 900; color: #002366; margin-bottom: 3rem; letter-spacing: 2px;">Featured Products</h2>
+    <div class="products" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem;">
 
-      <div class="product">
-        <img src="main/grs.jpg" alt="Urban Grey Shirt" />
-        <h3>Urban Grey Shirt</h3>
-        <p>$28</p>
-        <button onclick="addToCart(28)">Add to Cart</button>
+      <div class="product" style="background: #fff; border-radius: 15px; box-shadow: 0 10px 25px rgba(0, 35, 102, 0.15); padding: 1.5rem; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: default;"
+           onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 35px rgba(0, 35, 102, 0.3)';"
+           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px rgba(0, 35, 102, 0.15)';">
+        <img src="main/grs.jpg" alt="Urban Grey Shirt" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; margin-bottom: 1.2rem; transition: transform 0.3s ease;" 
+             onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';" />
+        <h3 style="font-weight: 700; font-size: 1.2rem; color: #222; margin-bottom: 0.5rem;">Urban Grey Shirt</h3>
+        <p style="color: #e4002b; font-weight: 800; font-size: 1.1rem; margin-bottom: 1.2rem;">$28</p>
+        <button onclick="addToCart(28)" style="background: #002366; color: white; padding: 0.85rem 2rem; font-weight: 700; font-size: 1rem; border-radius: 30px; border: none; cursor: pointer; box-shadow: 0 4px 15px rgba(0, 35, 102, 0.4); transition: background-color 0.3s ease, box-shadow 0.3s ease;"
+          onmouseover="this.style.backgroundColor='#e4002b'; this.style.boxShadow='0 6px 20px rgba(228, 0, 43, 0.7)';"
+          onmouseout="this.style.backgroundColor='#002366'; this.style.boxShadow='0 4px 15px rgba(0, 35, 102, 0.4)';"
+        >Add to Cart</button>
       </div>
 
-      <div class="product">
-        <img src="main/cream.webp" alt="Signature Logo Tee" />
-        <h3>Signature Logo Tee</h3>
-        <p>$35</p>
-        <button onclick="addToCart(35)">Add to Cart</button>
+      <div class="product" style="background: #fff; border-radius: 15px; box-shadow: 0 10px 25px rgba(0, 35, 102, 0.15); padding: 1.5rem; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: default;"
+           onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 35px rgba(0, 35, 102, 0.3)';"
+           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px rgba(0, 35, 102, 0.15)';">
+        <img src="main/cream.webp" alt="Signature Logo Tee" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; margin-bottom: 1.2rem; transition: transform 0.3s ease;" 
+             onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';" />
+        <h3 style="font-weight: 700; font-size: 1.2rem; color: #222; margin-bottom: 0.5rem;">Signature Logo Tee</h3>
+        <p style="color: #e4002b; font-weight: 800; font-size: 1.1rem; margin-bottom: 1.2rem;">$35</p>
+        <button onclick="addToCart(35)" style="background: #002366; color: white; padding: 0.85rem 2rem; font-weight: 700; font-size: 1rem; border-radius: 30px; border: none; cursor: pointer; box-shadow: 0 4px 15px rgba(0, 35, 102, 0.4); transition: background-color 0.3s ease, box-shadow 0.3s ease;"
+          onmouseover="this.style.backgroundColor='#e4002b'; this.style.boxShadow='0 6px 20px rgba(228, 0, 43, 0.7)';"
+          onmouseout="this.style.backgroundColor='#002366'; this.style.boxShadow='0 4px 15px rgba(0, 35, 102, 0.4)';"
+        >Add to Cart</button>
       </div>
 
-      <div class="product">
-        <img src="main/black.webp" alt="Modern Fit Shirt" />
-        <h3>Modern Fit Shirt</h3>
-        <p>$27</p>
-        <button onclick="addToCart(27)">Add to Cart</button>
+      <div class="product" style="background: #fff; border-radius: 15px; box-shadow: 0 10px 25px rgba(0, 35, 102, 0.15); padding: 1.5rem; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: default;"
+           onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 35px rgba(0, 35, 102, 0.3)';"
+           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px rgba(0, 35, 102, 0.15)';">
+        <img src="main/black.webp" alt="Modern Fit Shirt" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; margin-bottom: 1.2rem; transition: transform 0.3s ease;" 
+             onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';" />
+        <h3 style="font-weight: 700; font-size: 1.2rem; color: #222; margin-bottom: 0.5rem;">Modern Fit Shirt</h3>
+        <p style="color: #e4002b; font-weight: 800; font-size: 1.1rem; margin-bottom: 1.2rem;">$27</p>
+        <button onclick="addToCart(27)" style="background: #002366; color: white; padding: 0.85rem 2rem; font-weight: 700; font-size: 1rem; border-radius: 30px; border: none; cursor: pointer; box-shadow: 0 4px 15px rgba(0, 35, 102, 0.4); transition: background-color 0.3s ease, box-shadow 0.3s ease;"
+          onmouseover="this.style.backgroundColor='#e4002b'; this.style.boxShadow='0 6px 20px rgba(228, 0, 43, 0.7)';"
+          onmouseout="this.style.backgroundColor='#002366'; this.style.boxShadow='0 4px 15px rgba(0, 35, 102, 0.4)';"
+        >Add to Cart</button>
       </div>
 
     </div>
   </div>
 
-  <footer>
+  <footer style="background-color: #002366; color: white; text-align: center; padding: 1.5rem 1rem; font-weight: 600; letter-spacing: 1.2px; box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.2); user-select: none;">
     &copy; 2026 TOMMY HILFIGER
   </footer>
 
@@ -221,4 +84,3 @@
   </script>
 </body>
 </html>
-
