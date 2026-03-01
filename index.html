@@ -1,86 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  
-  <title>Tommy Hilfiger</title>
+    <title>College Enrollment Login</title>
 </head>
-<body style="margin:0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f7f8fa; color: #111; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
 
-  <nav style="background-color: #002366; padding: 1rem 3rem; display: flex; justify-content: flex-start; align-items: center; box-shadow: 0 3px 10px rgba(0, 35, 102, 0.3);">
-    <div class="logo">
-      <img src="main/tommy2.jpg" alt="Tommy Hilfiger Logo" 
-        style="height: 50px; filter: brightness(100%); cursor: pointer; transition: filter 0.3s ease;" 
-        onmouseover="this.style.filter='brightness(85%)';" 
-        onmouseout="this.style.filter='brightness(100%)';" />
-    </div>
-  </nav>
+<body background="images/design2.webp">
 
-  <section class="hero" style="background: linear-gradient(90deg, #002366 60%, #e4002b 40%); color: white; height: 90vh; display: flex; justify-content: center; align-items: center; text-align: center; padding: 0 1rem;">
-    <div class="hero-content" style="max-width: 600px;">
-      <h1 style="font-size:3rem; font-weight:900; letter-spacing:3px; margin-bottom:1rem; text-transform:uppercase; text-shadow: 1px 2px 6px rgba(0,0,0,0.3);">Welcome to Tommy Hilfiger</h1>
-      <a href="products.html">
-        <button style="background-color: white; color: #002366; border: none; padding: 1rem 2.5rem; font-size: 1.2rem; font-weight: 700; border-radius: 30px; cursor: pointer; box-shadow: 0 10px 25px rgba(255, 255, 255, 0.6); transition: background-color 0.3s ease, color 0.3s ease;"
-          onmouseover="this.style.backgroundColor='#e4002b'; this.style.color='white'; this.style.boxShadow='0 10px 25px rgba(228, 0, 43, 0.8)';" 
-          onmouseout="this.style.backgroundColor='white'; this.style.color='#002366'; this.style.boxShadow='0 10px 25px rgba(255, 255, 255, 0.6)';"
-        >Shop Now</button>
-      </a>
-    </div>
-  </section>
+<center>
+<br><br>
 
-  <div class="container" style="max-width: 1100px; margin: 3rem auto 6rem; padding: 0 1.5rem;">
-    <h2 style="text-align: center; font-size: 2.8rem; font-weight: 900; color: #002366; margin-bottom: 3rem; letter-spacing: 2px;">Featured Products</h2>
-    <div class="products" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem;">
+<table width="400" bgcolor="white" cellpadding="20">
+<tr>
+<td>
 
-      <div class="product" style="background: #fff; border-radius: 15px; box-shadow: 0 10px 25px rgba(0, 35, 102, 0.15); padding: 1.5rem; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: default;"
-           onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 35px rgba(0, 35, 102, 0.3)';"
-           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px rgba(0, 35, 102, 0.15)';">
-        <img src="main/grs.jpg" alt="Urban Grey Shirt" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; margin-bottom: 1.2rem; transition: transform 0.3s ease;" 
-             onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';" />
-        <h3 style="font-weight: 700; font-size: 1.2rem; color: #222; margin-bottom: 0.5rem;">Urban Grey Shirt</h3>
-        <p style="color: #e4002b; font-weight: 800; font-size: 1.1rem; margin-bottom: 1.2rem;">$28</p>
-        <button onclick="addToCart(28)" style="background: #002366; color: white; padding: 0.85rem 2rem; font-weight: 700; font-size: 1rem; border-radius: 30px; border: none; cursor: pointer; box-shadow: 0 4px 15px rgba(0, 35, 102, 0.4); transition: background-color 0.3s ease, box-shadow 0.3s ease;"
-          onmouseover="this.style.backgroundColor='#e4002b'; this.style.boxShadow='0 6px 20px rgba(228, 0, 43, 0.7)';"
-          onmouseout="this.style.backgroundColor='#002366'; this.style.boxShadow='0 4px 15px rgba(0, 35, 102, 0.4)';"
-        >Add to Cart</button>
-      </div>
+<center>
+<h2>College Enrollment System</h2>
+<h3>Login Account</h3>
+</center>
 
-      <div class="product" style="background: #fff; border-radius: 15px; box-shadow: 0 10px 25px rgba(0, 35, 102, 0.15); padding: 1.5rem; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: default;"
-           onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 35px rgba(0, 35, 102, 0.3)';"
-           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px rgba(0, 35, 102, 0.15)';">
-        <img src="main/cream.webp" alt="Signature Logo Tee" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; margin-bottom: 1.2rem; transition: transform 0.3s ease;" 
-             onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';" />
-        <h3 style="font-weight: 700; font-size: 1.2rem; color: #222; margin-bottom: 0.5rem;">Signature Logo Tee</h3>
-        <p style="color: #e4002b; font-weight: 800; font-size: 1.1rem; margin-bottom: 1.2rem;">$35</p>
-        <button onclick="addToCart(35)" style="background: #002366; color: white; padding: 0.85rem 2rem; font-weight: 700; font-size: 1rem; border-radius: 30px; border: none; cursor: pointer; box-shadow: 0 4px 15px rgba(0, 35, 102, 0.4); transition: background-color 0.3s ease, box-shadow 0.3s ease;"
-          onmouseover="this.style.backgroundColor='#e4002b'; this.style.boxShadow='0 6px 20px rgba(228, 0, 43, 0.7)';"
-          onmouseout="this.style.backgroundColor='#002366'; this.style.boxShadow='0 4px 15px rgba(0, 35, 102, 0.4)';"
-        >Add to Cart</button>
-      </div>
+<hr>
 
-      <div class="product" style="background: #fff; border-radius: 15px; box-shadow: 0 10px 25px rgba(0, 35, 102, 0.15); padding: 1.5rem; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: default;"
-           onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 35px rgba(0, 35, 102, 0.3)';"
-           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px rgba(0, 35, 102, 0.15)';">
-        <img src="main/black.webp" alt="Modern Fit Shirt" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; margin-bottom: 1.2rem; transition: transform 0.3s ease;" 
-             onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';" />
-        <h3 style="font-weight: 700; font-size: 1.2rem; color: #222; margin-bottom: 0.5rem;">Modern Fit Shirt</h3>
-        <p style="color: #e4002b; font-weight: 800; font-size: 1.1rem; margin-bottom: 1.2rem;">$27</p>
-        <button onclick="addToCart(27)" style="background: #002366; color: white; padding: 0.85rem 2rem; font-weight: 700; font-size: 1rem; border-radius: 30px; border: none; cursor: pointer; box-shadow: 0 4px 15px rgba(0, 35, 102, 0.4); transition: background-color 0.3s ease, box-shadow 0.3s ease;"
-          onmouseover="this.style.backgroundColor='#e4002b'; this.style.boxShadow='0 6px 20px rgba(228, 0, 43, 0.7)';"
-          onmouseout="this.style.backgroundColor='#002366'; this.style.boxShadow='0 4px 15px rgba(0, 35, 102, 0.4)';"
-        >Add to Cart</button>
-      </div>
+<form action="register.html">
 
-    </div>
-  </div>
+<label>Username:</label><br>
+<input type="text" placeholder="Enter Username" size="40" required>
+<br><br>
 
-  <footer style="background-color: #002366; color: white; text-align: center; padding: 1.5rem 1rem; font-weight: 600; letter-spacing: 1.2px; box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.2); user-select: none;">
-    &copy; 2026 TOMMY HILFIGER
-  </footer>
+<label>Password:</label><br>
+<input type="password" placeholder="Enter Password" size="40" required>
+<br><br>
 
-  <script>
-    function addToCart(price) {
-      alert('Added to cart: $' + price);
-    }
-  </script>
+<center>
+<input type="submit" value="Login" style="background:black;color:white;width:150px;height:35px;">
+<br><br>
+<a href="register.html">Create New Account</a>
+</center>
+
+</form>
+
+</td>
+</tr>
+</table>
+
+</center>
+
 </body>
 </html>
