@@ -1,49 +1,232 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
-    <title> Clark College of Science and Technology</ltitle>
+    <title>Clark College of Science and Technology Enrollment form.</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f7ff;
+            color: #003366;
+            margin: 0;
+            padding: 30px 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,51,102,0.2);
+        }
+        h2 {
+            color: #004080;
+            margin-bottom: 10px;
+        }
+        fieldset {
+            border: 2px solid #3366cc;
+            border-radius: 6px;
+            padding: 20px 25px 30px 25px;
+            margin-bottom: 25px;
+            background: #e6f0ff;
+        }
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+            color: #003366;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: 600;
+            color: #003366;
+        }
+        input[type=text], input[type=number], input[type=date], input[type=time], select {
+            width: 100%;
+            padding: 8px 10px;
+            margin-top: 5px;
+            border: 1.5px solid #3366cc;
+            border-radius: 4px;
+            font-size: 15px;
+            color: #003366;
+            background: white;
+            box-sizing: border-box;
+        }
+        input[type=radio] {
+            margin-top: 12px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+        .radio-label {
+            margin-right: 20px;
+            font-weight: normal;
+            cursor: pointer;
+        }
+        .btn {
+            width: 200px;
+            height: 35px;
+            border: none;
+            border-radius: 4px;
+            font-size: 17px;
+            color: white;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s ease;
+            margin-right: 15px;
+        }
+        .btn-register {
+            background-color: #28a745;
+        }
+        .btn-register:hover {
+            background-color: #218838;
+        }
+        .btn-clear {
+            background-color: #dc3545;
+        }
+        .btn-clear:hover {
+            background-color: #c82333;
+        }
+        .buttons-center {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+        a {
+            color: #004080;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        #notification {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1.5px solid #c3e6cb;
+            padding: 12px 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 6px;
+            font-size: 16px;
+            display: none;
+            text-align: center;
+        }
+    </style>
 </head>
 
-<body background="images/design2.webp">
+<body>
+    <div class="container">
+        <center><h2>College Enrollment Form</h2></center>
+        <hr style="border-color:#3366cc;">
+        <form id="enrollForm">
+            <fieldset>
+                <legend>Personal Information</legend>
 
-<center>
-<br><br>
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname" placeholder="Enter First Name" required>
 
-<table width="400" bgcolor="white" cellpadding="20">
-<tr>
-<td>
+                <label for="mname">Middle Name:</label>
+                <input type="text" id="mname" name="mname" placeholder="Enter Middle Name">
 
-<center>
-<h2>Clark College of Science and Technology Enrollment</h2>
-<h3>Login Account</h3>
-</center>
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lname" placeholder="Enter Last Name" required>
 
-<hr>
+                <label>Birth Date & Time:</label>
+                <input type="date" id="bdate" name="bdate" required style="width:48%; display:inline-block; margin-right:4%;">
+                <input type="time" id="btime" name="btime" required style="width:48%; display:inline-block;">
 
-<form action="register.html">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="1" required>
 
-<label>Username:</label><br>
-<input type="text" placeholder="Enter Username" size="40" required>
-<br><br>
+                <label>Sex:</label>
+                <label class="radio-label"><input type="radio" name="gender" value="Male" required> Male</label>
+                <label class="radio-label"><input type="radio" name="gender" value="Female" required> Female</label>
 
-<label>Password:</label><br>
-<input type="password" placeholder="Enter Password" size="40" required>
-<br><br>
+                <label for="civilstatus">Civil Status:</label>
+                <input type="text" id="civilstatus" name="civilstatus" placeholder="Enter Civil Status" required>
+            </fieldset>
 
-<center>
-<input type="submit" value="Login" style="background:black;color:white;width:150px;height:35px;">
-<br><br>
-<a href="register.html">Create New Account</a>
-</center>
+            <fieldset>
+                <legend>Academic Information</legend>
 
-</form>
+                <label for="yearlevel">Year Level:</label>
+                <select id="yearlevel" name="yearlevel" required>
+                    <option value="" disabled selected>Select Year Level</option>
+                    <option>1st Year</option>
+                    <option>2nd Year</option>
+                    <option>3rd Year</option>
+                    <option>4th Year</option>
+                </select>
 
-</td>
-</tr>
-</table>
+                <label for="course">Course:</label>
+                <select id="course" name="course" required>
+                    <option value="" disabled selected>Select Course</option>
+                    <option>ACT</option>
+                    <option>BSOA</option>
+                    <option>HM</option>
+                </select>
 
-</center>
+                <label for="credentials">Credentials Submitted:</label>
+                <select id="credentials" name="credentials" required>
+                    <option value="" disabled selected>Select Credentials</option>
+                    <option>Form 138</option>
+                    <option>Form 137</option>
+                    <option>Birth Certificate</option>
+                    <option>Good Moral Character</option>
+                    <option>Transcript of Records</option>
+                    <option>Certificate of Credentials</option>
+                    <option>Summer Permit</option>
+                    <option>Picture</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Address Information</legend>
+
+                <label for="region">Region:</label>
+                <input type="text" id="region" name="region" required>
+
+                <label for="province">Province:</label>
+                <input type="text" id="province" name="province" required>
+
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+
+                <label for="barangay">Barangay:</label>
+                <input type="text" id="barangay" name="barangay" required>
+
+                <label for="houseno">House No/Street:</label>
+                <input type="text" id="houseno" name="houseno" required>
+
+                <label for="contactno">Contact No:</label>
+                <input type="number" id="contactno" name="contactno" required>
+            </fieldset>
+
+            <div class="buttons-center">
+                <input type="submit" value="Register" class="btn btn-register">
+                <input type="reset" value="Clear" class="btn btn-clear">
+            </div>
+
+            <center><a href="index.html">Back to Login</a></center>
+        </form>
+    </div>
+
+    <div id="notification">Registered Successfully!</div>
+
+<script>
+    document.getElementById('enrollForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        // Show notification
+        let notif = document.getElementById('notification');
+        notif.style.display = 'block';
+        // Scroll to notification
+        notif.scrollIntoView({behavior: "smooth"});
+        // Hide notification after 3 seconds
+        setTimeout(() => { notif.style.display = 'none'; }, 3000);
+        // Optionally clear form after submission
+        // this.reset();
+    });
+</script>
 
 </body>
 </html>
-
+Leave a message (Shift+Enter for new line)
