@@ -1,221 +1,175 @@
- <!DOCTYPE html>
-<html>
+
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Clark College of Science and Technology Enrollment form.</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f0f7ff;
-            color: #003366;
-            margin: 0;
-            padding: 30px 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 30px 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,51,102,0.2);
-        }
-        h2 {
-            color: #004080;
-            margin-bottom: 10px;
-        }
-        fieldset {
-            border: 2px solid #3366cc;
-            border-radius: 6px;
-            padding: 20px 25px 30px 25px;
-            margin-bottom: 25px;
-            background: #e6f0ff;
-        }
-        legend {
-            font-weight: bold;
-            padding: 0 10px;
-            color: #003366;
-        }
-        label {
-            display: block;
-            margin-top: 10px;
-            font-weight: 600;
-            color: #003366;
-        }
-        input[type=text], input[type=number], input[type=date], input[type=time], select {
-            width: 100%;
-            padding: 8px 10px;
-            margin-top: 5px;
-            border: 1.5px solid #3366cc;
-            border-radius: 4px;
-            font-size: 15px;
-            color: #003366;
-            background: white;
-            box-sizing: border-box;
-        }
-        input[type=radio] {
-            margin-top: 12px;
-            margin-right: 5px;
-            cursor: pointer;
-        }
-        .radio-label {
-            margin-right: 20px;
-            font-weight: normal;
-            cursor: pointer;
-        }
-        .btn {
-            width: 200px;
-            height: 35px;
-            border: none;
-            border-radius: 4px;
-            font-size: 17px;
-            color: white;
-            cursor: pointer;
-            font-weight: 600;
-            transition: background 0.3s ease;
-            margin-right: 15px;
-        }
-        .btn-register {
-            background-color: #28a745;
-        }
-        .btn-register:hover {
-            background-color: #218838;
-        }
-        .btn-clear {
-            background-color: #dc3545;
-        }
-        .btn-clear:hover {
-            background-color: #c82333;
-        }
-        .buttons-center {
-            text-align: center;
-            margin-top: 20px;
-            margin-bottom: 15px;
-        }
-        a {
-            color: #004080;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        #notification {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1.5px solid #c3e6cb;
-            padding: 12px 20px;
-            margin: 20px auto;
-            max-width: 800px;
-            border-radius: 6px;
-            font-size: 16px;
-            display: none;
-            text-align: center;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>College Enrollment Form</title>
+  <style>
+    body {
+      padding: 25px;
+      background-color: #e6f0ff;
+      font-family: Arial, sans-serif;
+      color: #1a365d;
+    }
+    h1 {
+      color: #2a4d8f;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    label {
+      display: inline-block;
+      width: 140px;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    input[type="number"],
+    select {
+      width: 250px;
+      padding: 6px 8px;
+      margin-bottom: 15px;
+      border: 1px solid #4d79ff;
+      border-radius: 4px;
+      background-color: white;
+      color: #1a365d;
+      font-size: 14px;
+    }
+    input[type="radio"] {
+      margin-left: 5px;
+      margin-right: 4px;
+    }
+    .radio-label {
+      margin-right: 15px;
+    }
+    .btn-link {
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      background-color: #2a4d8f;
+      color: white;
+      width: 200px;
+      height: 35px;
+      line-height: 35px;
+      border-radius: 5px;
+      font-weight: 700;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .btn-link:hover {
+      background-color: #1a365d;
+    }
+    input[type="reset"] {
+      background-color: #ffffff;
+      border: 2px solid #2a4d8f;
+      color: #2a4d8f;
+      width: 200px;
+      height: 35px;
+      font-weight: 700;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input[type="reset"]:hover {
+      background-color: #2a4d8f;
+      color: white;
+    }
+    form {
+      max-width: 480px;
+      margin: 0 auto;
+      background: white;
+      padding: 25px 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(42, 77, 143, 0.3);
+    }
+  </style>
 </head>
-
 <body>
-    <div class="container">
-        <center><h2>College Enrollment Form</h2></center>
-        <hr style="border-color:#3366cc;">
-        <form id="enrollForm">
-            <fieldset>
-                <legend>Personal Information</legend>
+  <h1>College Enrollment Form</h1>
+  <form>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" placeholder="Please Enter First Name" required /><br />
 
-                <label for="fname">First Name:</label>
-                <input type="text" id="fname" name="fname" placeholder="Enter First Name" required>
+    <label for="middleName">Middle Name:</label>
+    <input type="text" id="middleName" placeholder="Please Enter Middle Name" required /><br />
 
-                <label for="mname">Middle Name:</label>
-                <input type="text" id="mname" name="mname" placeholder="Enter Middle Name">
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" placeholder="Please Enter Last Name" required /><br />
 
-                <label for="lname">Last Name:</label>
-                <input type="text" id="lname" name="lname" placeholder="Enter Last Name" required>
+    <label for="birthDate">Birth Date:</label>
+    <input type="date" id="birthDate" /><br />
 
-                <label>Birth Date & Time:</label>
-                <input type="date" id="bdate" name="bdate" required style="width:48%; display:inline-block; margin-right:4%;">
-                <input type="time" id="btime" name="btime" required style="width:48%; display:inline-block;">
+    <label for="birthTime">Birth Time:</label>
+    <input type="time" id="birthTime" /><br />
 
-                <label for="age">Age:</label>
-                <input type="number" id="age" name="age" min="1" required>
+    <label for="birthdayText">Birthday:</label>
+    <input type="text" id="birthdayText" /><br />
 
-                <label>Sex:</label>
-                <label class="radio-label"><input type="radio" name="gender" value="Male" required> Male</label>
-                <label class="radio-label"><input type="radio" name="gender" value="Female" required> Female</label>
+    <label for="age">Age:</label>
+    <input type="number" id="age" /><br />
 
-                <label for="civilstatus">Civil Status:</label>
-                <input type="text" id="civilstatus" name="civilstatus" placeholder="Enter Civil Status" required>
-            </fieldset>
+    <label for="yearLevel">Year Level:</label>
+    <select id="yearLevel" required>
+      <option value="">Please Select Year Level</option>
+      <option value="1st Year">1st Year</option>
+      <option value="2nd Year">2nd Year</option>
+      <option value="3rd Year">3rd Year</option>
+      <option value="4th Year">4th Year</option>
+    </select><br />
 
-            <fieldset>
-                <legend>Academic Information</legend>
+    <label for="course">Course:</label>
+    <select id="course" required>
+      <option value="">Please Select Course</option>
+      <option value="ACT">ACT</option>
+      <option value="BSOA">BSOA</option>
+      <option value="HM">HM</option>
+    </select><br />
 
-                <label for="yearlevel">Year Level:</label>
-                <select id="yearlevel" name="yearlevel" required>
-                    <option value="" disabled selected>Select Year Level</option>
-                    <option>1st Year</option>
-                    <option>2nd Year</option>
-                    <option>3rd Year</option>
-                    <option>4th Year</option>
-                </select>
+    <label for="citizenship">Citizenship:</label>
+    <input type="text" id="citizenship" /><br />
 
-                <label for="course">Course:</label>
-                <select id="course" name="course" required>
-                    <option value="" disabled selected>Select Course</option>
-                    <option>ACT</option>
-                    <option>BSOA</option>
-                    <option>HM</option>
-                </select>
+    <label>Sex:</label>
+    <span class="radio-label"><input type="radio" name="gender" id="male" value="Male" /><label for="male">Male</label></span>
+    <span class="radio-label"><input type="radio" name="gender" id="female" value="Female" /><label for="female">Female</label></span><br />
 
-                <label for="credentials">Credentials Submitted:</label>
-                <select id="credentials" name="credentials" required>
-                    <option value="" disabled selected>Select Credentials</option>
-                    <option>Form 138</option>
-                    <option>Form 137</option>
-                    <option>Birth Certificate</option>
-                    <option>Good Moral Character</option>
-                    <option>Transcript of Records</option>
-                    <option>Certificate of Credentials</option>
-                    <option>Summer Permit</option>
-                    <option>Picture</option>
-                </select>
-            </fieldset>
+    <label for="civilStatus">Civil Status:</label>
+    <input type="text" id="civilStatus" /><br />
 
-            <fieldset>
-                <legend>Address Information</legend>
+    <label for="region">Region:</label>
+    <input type="text" id="region" /><br />
 
-                <label for="region">Region:</label>
-                <input type="text" id="region" name="region" required>
+    <label for="province">Province:</label>
+    <input type="text" id="province" /><br />
 
-                <label for="province">Province:</label>
-                <input type="text" id="province" name="province" required>
+    <label for="city">City:</label>
+    <input type="text" id="city" /><br />
 
-                <label for="city">City:</label>
-                <input type="text" id="city" name="city" required>
+    <label for="barangay">Barangay:</label>
+    <input type="text" id="barangay" /><br />
 
-                <label for="barangay">Barangay:</label>
-                <input type="text" id="barangay" name="barangay" required>
+    <label for="houseNo">House No/Street:</label>
+    <input type="text" id="houseNo" /><br />
 
-                <label for="houseno">House No/Street:</label>
-                <input type="text" id="houseno" name="houseno" required>
+    <label for="contactNo">Contact No:</label>
+    <input type="number" id="contactNo" /><br />
 
-                <label for="contactno">Contact No:</label>
-                <input type="number" id="contactno" name="contactno" required>
-            </fieldset>
+    <label for="credentials">Credentials Submitted:</label>
+    <select id="credentials" required>
+      <option value="">Please Select Credentials</option>
+      <option value="form138">form 138 (high school)</option>
+      <option value="form137">form 137</option>
+      <option value="birthCertificate">Birth Certificate</option>
+      <option value="goodMoral">Good Moral Character</option>
+      <option value="transcript">Transcript Of Records</option>
+      <option value="certificate">Certificate Of Credentials</option>
+      <option value="summerPermit">Summer Permit</option>
+      <option value="picture">Picture</option>
+    </select><br /><br />
 
-            <div class="buttons-center">
-                <input type="register.html" value="Register" class="btn btn-register">
-                 <a href = "register.html">
-                <input type="reset" value="Clear" class="btn btn-clear">
-            </div>
-
-         
-        </form>
-    
-
+    <a href="https://example.com/register" class="btn-link">Register</a>
+    <input type="reset" value="Clear" />
+  </form>
 </body>
 </html>
-
-
-
-
-
-
