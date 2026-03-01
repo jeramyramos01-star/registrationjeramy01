@@ -202,31 +202,15 @@
             </fieldset>
 
             <div class="buttons-center">
-                <input type="submit" value="Register" class="btn btn-register">
+                <a href = "register.html" type="submit" value="Register" class="btn btn-register">
                 <input type="reset" value="Clear" class="btn btn-clear">
             </div>
 
-            <center><a href="index.html">Back to Login</a></center>
+         
         </form>
-    </div>
-
-    <div id="notification">Registered Successfully!</div>
-
-<script>
-    document.getElementById('enrollForm').addEventListener('submit', function (e) {
-        e.preventDefault();
-        // Show notification
-        let notif = document.getElementById('notification');
-        notif.style.display = 'block';
-        // Scroll to notification
-        notif.scrollIntoView({behavior: "smooth"});
-        // Hide notification after 3 seconds
-        setTimeout(() => { notif.style.display = 'none'; }, 3000);
-        // Optionally clear form after submission
-        // this.reset();
-    });
-</script>
+    
 
 </body>
 </html>
-Leave a message (Shift+Enter for new line)
+
+
